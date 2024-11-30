@@ -11,7 +11,7 @@ networks:
 
 services:
   setup:
-    image: docker.arvancloud.ir/elasticsearch:${STACK_VERSION}
+    image: elasticsearch:${STACK_VERSION}
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
     user: "0"
@@ -69,7 +69,7 @@ services:
     depends_on:
       setup:
         condition: service_healthy
-    image: docker.arvancloud.ir/elasticsearch:${STACK_VERSION}
+    image: elasticsearch:${STACK_VERSION}
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
       - es-data:/usr/share/elasticsearch/data
@@ -111,7 +111,7 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
-    image: docker.arvancloud.ir/kibana:${STACK_VERSION}
+    image: kibana:${STACK_VERSION}
     volumes:
       - certs:/usr/share/kibana/config/certs
       - kibana-data:/usr/share/kibana/data
@@ -146,7 +146,7 @@ services:
     image: docker.arvancloud.ir/logstash:${STACK_VERSION}
     user: root
     ports:
-      - 5044:5044
+      - ${LS_PORT}:5044
     volumes:
       - certs:/usr/share/logstash/certs
       - logstash-data:/usr/share/logstash/data

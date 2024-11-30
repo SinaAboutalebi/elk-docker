@@ -60,7 +60,7 @@ LS_MEM_LIMIT=1073741824 # 1GB
 # Predefined Key for Encryption (for POC environments)
 ENCRYPTION_KEY=2eaf03a40b85cee6265e34f871073155174b0305e0712ff12165941a3b83d43c
 
-# License type (Basic, Gold, Platinum, etc.)
+# License type
 LICENSE=basic
 ```
 
