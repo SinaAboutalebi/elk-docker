@@ -89,6 +89,7 @@ The `setup` service will run first to generate the necessary certificates. It wi
 
 - **Elasticsearch** will be available on `https://localhost:${ES_PORT}`.
 - **Kibana** will be available on `http://localhost:${KIBANA_PORT}`.
+
 **4. Access the Services 🌐**
 - **Elasticsearch API**: `https://localhost:${ES_PORT}`
 - **Kibana UI:** `http://localhost:${KIBANA_PORT}`
